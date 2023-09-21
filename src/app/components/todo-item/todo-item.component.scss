@@ -1,0 +1,22 @@
+@use "../../../variables";
+
+.done {
+  background-color: #fd86d1;
+}
+.unfinished {
+  background-color: #bfb0d1;
+}
+.card {
+  color: #000;
+  border-radius: 0%;
+  box-shadow: 10px 5px 5px #49297e;
+}
+
+.card-header {
+  border-width: variables.$border-bottom-width;
+  border-color: variables.$border-botoom-color;
+  background-color: variables.$card-header-color;
+}
+.card-text {
+  font-size: xx-large;
+}

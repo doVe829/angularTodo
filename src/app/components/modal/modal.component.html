@@ -1,0 +1,67 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="mx-auto">{{ modalHeader }}</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3 row">
+        <label for="todoName">Todo name:</label>
+        <div>
+          <input id="todoName" [(ngModel)]="todoItem.name" name="todoName" />
+        </div>
+        <label for="todoDescription">Todo description:</label>
+        <div>
+          <input
+            id="todoDescription"
+            [(ngModel)]="todoItem.description"
+            name="todoDescription"
+          />
+        </div>
+        <div *ngIf="showDone">
+          <input
+            class="oldschool"
+            type="checkbox"
+            name="flexCheckboxDefault"
+            id="flexCheckboxDefault"
+            [(ngModel)]="todoItem.done"
+          />
+          <label class="form-check-label spacer" for="flexCheckboxDefault">
+            Todo done
+            {{ todoItem.done }}
+          </label>
+        </div>
+        <div>
+          <input
+            class="oldschool"
+            type="checkbox"
+            name="flexCheckboxDefault2"
+            id="flexCheckboxDefault2"
+            [(ngModel)]="todoItem.important"
+          />
+          <label class="form-check-label spacer" for="flexCheckboxDefault2">
+            Todo important
+            {{ todoItem.important }}
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="modal.close('Save click')"
+      (click)="saveStuff()"
+    >
+      Save
+    </button>
+  </div>
+</ng-template>
+
+<app-button (click)="open(content)" buttonIcon="{{ btnIcon }}"></app-button>

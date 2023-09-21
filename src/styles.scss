@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  font-family: "source-code-pro", "Menlo", "Monaco", "Consolas", "Courier New",
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;
+  background: #282c34;
+}
+
+i {
+  // color: #b543ee;
+  color: #febf58;
+  font-size: 1.5em;
+}

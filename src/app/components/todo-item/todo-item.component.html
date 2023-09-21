@@ -1,0 +1,28 @@
+<div
+  class="card mt-5 border-primary"
+  [ngClass]="{
+    done: content.done,
+    unfinished: !content.done,
+    'my-5': content.important
+  }"
+  style="width: 18rem"
+>
+  <h3 class="card-header mb-5">{{ content.name }}</h3>
+  <div class="card-body">
+    <p class="card-text mb-5">
+      {{ content.description }}
+    </p>
+    <div class="d-flex justify-content-end align-items-end">
+      <app-button
+        (click)="deleteItem(content.id)"
+        buttonIcon="bi bi-trash-fill"
+      ></app-button>
+      <app-modal
+        [showDone]="true"
+        [todoItem]="content"
+        btnIcon="bi bi-pencil-square"
+      ></app-modal>
+      <!-- <app-button buttonIcon="bi bi-check2-circle"></app-button> -->
+    </div>
+  </div>
+</div>

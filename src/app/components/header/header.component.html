@@ -1,0 +1,12 @@
+<h1 class="mt-5">
+  {{ headerTitle | uppercase }}
+  <div class="d-flex justify-content-end">
+    <app-modal
+      [saveFunction]="true"
+      [btnIcon]="'bi bi-plus-circle-fill'"
+      [todoItem]="defaultTodo"
+      modalHeader="Create new todo"
+    >
+    </app-modal>
+  </div>
+</h1>
