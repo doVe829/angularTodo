@@ -1,5 +1,7 @@
 # NgTodo
 
+This is has by no means optimal implementations and is used to test different angular directives etc.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 ## Development server
