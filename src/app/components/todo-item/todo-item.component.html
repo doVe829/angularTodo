@@ -21,6 +21,7 @@
       [(ngModel)]="content.name"
       (blur)="title = false"
       type="text"
+      name="contentTitle"
     />
   </div>
   <div class="card-body">
@@ -40,6 +41,7 @@
       [(ngModel)]="content.description"
       (blur)="description = false"
       type="text"
+      name="contentDescription"
     />
     <div class="d-flex justify-content-end align-items-end">
       <app-button
