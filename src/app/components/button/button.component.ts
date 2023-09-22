@@ -1,6 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Todo } from 'src/app/models/todoInterface';
-import { ButtonService } from 'src/app/services/button.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',

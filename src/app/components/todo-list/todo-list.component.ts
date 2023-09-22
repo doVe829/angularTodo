@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Todo } from 'src/app/models/todoInterface';
 import { SharedDataService } from 'src/app/services/shared-data.service';
 

@@ -1,14 +1,18 @@
-<div class="h1 text-center">DO ASAP</div>
-<div
-  class="d-flex flex-wrap justify-content-around borderImportant"
-  *ngIf="items | filterImportant : true as importantItems"
->
-  <div *ngFor="let importantItem of importantItems">
-    <app-todo-item class="mx-auto" [content]="importantItem"></app-todo-item>
+<!-- TODO RE THINK IMPLEMENTATION -->
+
+<div *ngIf="items | filterImportant : true as importantItems">
+  <div *ngIf="importantItems.length" class="h1 text-center">DO ASAP</div>
+  <div
+    class="d-flex flex-wrap justify-content-around"
+    [ngClass]="{ borderImportant: importantItems.length }"
+  >
+    <div *ngFor="let importantItem of importantItems">
+      <app-todo-item class="mx-auto" [content]="importantItem"></app-todo-item>
+    </div>
   </div>
 </div>
 <div
-  class="d-flex flex-wrap justify-content-between"
+  class="d-flex flex-wrap justify-content-md-between justify-content-center"
   *ngIf="items | filterImportant : false as normalItems"
 >
   <div *ngFor="let normalItem of normalItems">

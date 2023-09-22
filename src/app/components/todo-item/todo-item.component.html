@@ -7,11 +7,40 @@
   }"
   style="width: 18rem"
 >
-  <h3 class="card-header mb-5">{{ content.name }}</h3>
+  <h3
+    class="card-header mb-5"
+    *ngIf="!title"
+    (dblclick)="makeEditable('title')"
+  >
+    {{ content.name }}
+  </h3>
+  <div [hidden]="!title" class="card-header">
+    <input
+      #refContentTitle
+      class="inline-edit card-header"
+      [(ngModel)]="content.name"
+      (blur)="title = false"
+      type="text"
+    />
+  </div>
   <div class="card-body">
-    <p class="card-text mb-5">
+    <p
+      class="card-text mb-5"
+      *ngIf="!description"
+      (dblclick)="makeEditable('desc')"
+    >
       {{ content.description }}
     </p>
+
+    <input
+      #refContentDescr
+      class="inline-edit"
+      [hidden]="!description"
+      [ngClass]="{ done: content.done, normal: !content.done }"
+      [(ngModel)]="content.description"
+      (blur)="description = false"
+      type="text"
+    />
     <div class="d-flex justify-content-end align-items-end">
       <app-button
         (click)="deleteItem(content.id)"
@@ -22,7 +51,6 @@
         [todoItem]="content"
         btnIcon="bi bi-pencil-square"
       ></app-modal>
-      <!-- <app-button buttonIcon="bi bi-check2-circle"></app-button> -->
     </div>
   </div>
 </div>
