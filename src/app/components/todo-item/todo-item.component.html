@@ -8,7 +8,9 @@
   style="width: 18rem"
 >
   <h3
-    class="card-header mb-5"
+    class="card-header mb-5 pointer"
+    data-toggle="tooltip"
+    title="double click to edit"
     *ngIf="!title"
     (dblclick)="makeEditable('title')"
   >
@@ -26,7 +28,9 @@
   </div>
   <div class="card-body">
     <p
-      class="card-text mb-5"
+      class="card-text mb-5 pointer"
+      data-toggle="tooltip"
+      title="double click to edit"
       *ngIf="!description"
       (dblclick)="makeEditable('desc')"
     >
