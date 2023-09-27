@@ -1,6 +1,6 @@
 <h1 class="mt-5">
   {{ headerTitle | uppercase }}
-  <div class="d-flex justify-content-end">
+  <div *ngIf="router.url === '/todos'" class="d-flex justify-content-end">
     <app-modal
       [saveFunction]="true"
       [btnIcon]="'bi bi-plus-circle-fill'"

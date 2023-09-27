@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@use "./variables" as var;
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 
@@ -9,16 +9,24 @@ body {
     monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  color: #fff;
   background: #282c34;
 }
 
 i {
   // color: #b543ee;
-  color: #febf58;
+  color: var.$splash-color;
   font-size: 1.5em;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.linkText {
+  text-decoration: none;
+  color: hotpink;
+  &:hover {
+    color: var.$splash-color;
+  }
 }

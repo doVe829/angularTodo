@@ -1,0 +1,24 @@
+<h1>Hi!</h1>
+<p>
+  this is a simple page to test angular routing, if you would like go to the
+  <a class="linkText" routerLink="/todos"> >Todos<</a>
+</p>
+<p>
+  Please confirm that you ABSOLUTELY LOVE Todo Apps by clicking the button below
+</p>
+<div class="row">
+  <app-button
+    class="love-todos mx-auto"
+    buttonIcon="bi bi-box2-heart-fill"
+    buttonTxt="I FREAKING LOVE TODO APPS"
+    (click)="getAccess()"
+  ></app-button>
+
+  <app-button
+    *ngIf="tokenState"
+    class="love-todos mx-auto mt-5"
+    buttonIcon="bi bi-heartbreak"
+    buttonTxt="I changed my mind"
+    (click)="revokeAcces()"
+  ></app-button>
+</div>

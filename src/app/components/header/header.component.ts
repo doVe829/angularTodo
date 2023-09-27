@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Todo } from 'src/app/models/todoInterface';
 import { SharedDataService } from 'src/app/services/shared-data.service';
 import { v4 as uuidv4 } from 'uuid';
@@ -9,7 +10,10 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor(private sharedService: SharedDataService) {}
+  constructor(
+    private sharedService: SharedDataService,
+    public router: Router
+  ) {}
   headerTitle: string = 'NG Todo';
   defaultTodo: Todo = {
     id: uuidv4(),

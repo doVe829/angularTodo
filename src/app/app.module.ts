@@ -10,6 +10,9 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { FilterItemsPipe } from './pipes/filter-items-pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { DisclaimerComponent } from './components/disclaimer/disclaimer.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +23,10 @@ import { FilterItemsPipe } from './pipes/filter-items-pipe';
     ButtonComponent,
     ModalComponent,
     FilterItemsPipe,
+    WelcomeComponent,
+    DisclaimerComponent,
   ],
-  imports: [BrowserModule, NgbModule, FormsModule],
+  imports: [BrowserModule, NgbModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
